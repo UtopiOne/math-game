@@ -1,9 +1,13 @@
-extends StaticBody2D
+extends RigidBody2D
 
-export var corresponding_number = 0
-const move_speed = 10
+@export var corresponding_number = 0
+const move_speed = 900
+var velocity = Vector2(-1 * move_speed, 0)
 
-func _physics_process(delta):
-	position.x -= move_speed
+func _ready():
+	mass = 500
+
+func _integrate_forces(state):
+	linear_velocity = velocity
 	
 

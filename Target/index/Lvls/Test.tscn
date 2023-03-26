@@ -3,7 +3,7 @@
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 57.25, 884 )
+size = Vector2( 57.25, 884 )
 
 [node name="World" type="Node"]
 
@@ -12,14 +12,14 @@ z_index = -10
 
 [node name="Polygon2D" type="Polygon2D" parent="Background"]
 color = Color( 0.772549, 0.772549, 0.772549, 1 )
-polygon = PoolVector2Array( -328, -200, -320, 1216, 2176, 1216, 2176, -200 )
+polygon = PackedVector2Array( -328, -200, -320, 1216, 2176, 1216, 2176, -200 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 154, 118 )
 collision_mask = 2
 speed = 700
 
-[node name="Position2D" type="Position2D" parent="Player"]
+[node name="Marker2D" type="Marker2D" parent="Player"]
 position = Vector2( 62.6667, -1.35135 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -32,12 +32,12 @@ collision_mask = 4
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EdgeCollisions"]
 position = Vector2( 963.308, -31 )
 scale = Vector2( 115.596, 4.1 )
-polygon = PoolVector2Array( -9.54887, 7.56098, 9.69925, 7.56098, 9.69925, -8.04878, -9.54887, -8.04878 )
+polygon = PackedVector2Array( -9.54887, 7.56098, 9.69925, 7.56098, 9.69925, -8.04878, -9.54887, -8.04878 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="EdgeCollisions"]
 position = Vector2( -147.019, 479.999 )
 scale = Vector2( 2.82471, 1 )
-polygon = PoolVector2Array( 2.30769, 600, 790, 600, 790, 664, 2.30769, 664 )
+polygon = PackedVector2Array( 2.30769, 600, 790, 600, 790, 664, 2.30769, 664 )
 __meta__ = {
 "_edit_group_": true
 }

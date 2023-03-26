@@ -1,6 +1,6 @@
 extends Node
 
-export(PackedScene) var enemy_scene
+@export var enemy_scene: PackedScene
 
 func _ready():
 	randomize()
