@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Enemies/scenes/Spawner.gd" id="3"]
 
 [sub_resource type="RectangleShape2D" id="2"]
-size = Vector2(57.25, 884)
+size = Vector2(57.25, 1278)
 
 [node name="World" type="Node"]
 script = ExtResource("2")
@@ -30,18 +30,6 @@ offset = Vector2(500, 0)
 enabled = false
 zoom = Vector2(0.5, 0.5)
 
-[node name="Player2" parent="." instance=ExtResource("1")]
-position = Vector2(154, 118)
-speed = 700
-
-[node name="Marker2D" type="Marker2D" parent="Player2"]
-position = Vector2(62.6667, -1.35135)
-
-[node name="DebugCamera" type="Camera2D" parent="Player2"]
-offset = Vector2(500, 0)
-enabled = false
-zoom = Vector2(0.5, 0.5)
-
 [node name="EdgeCollisions" type="StaticBody2D" parent="."]
 collision_mask = 4
 
@@ -59,7 +47,7 @@ polygon = PackedVector2Array(2.30769, 600, 790, 600, 790, 664, 2.30769, 664)
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BulletDestroyer"]
-position = Vector2(2232, 528)
+position = Vector2(2232, 559)
 shape = SubResource("2")
 
 [node name="Spawner" type="Node2D" parent="."]

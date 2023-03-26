@@ -14,6 +14,10 @@ config/name="EduShooter"
 run/main_scene="res://Levels/Test.tscn"
 config/features=PackedStringArray("4.0")
 
+[autoload]
+
+Enemy="*res://Enemies/scenes/enemy.gd"
+
 [display]
 
 window/size/viewport_width=1920
