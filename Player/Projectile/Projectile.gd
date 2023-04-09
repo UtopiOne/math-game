@@ -8,8 +8,8 @@ func _physics_process(delta):
 func _on_Projectile_areaasd_entered(area):
 	queue_free()
 
-
 func _on_Projectile_body_entered(body):
-	Enemy.corresponding_number = body.corresponding_number
+	Enemy.corresponding_number += str(body.corresponding_number)
+	
 	body.queue_free()
 	queue_free()

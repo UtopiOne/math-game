@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bo3fcswknf0ro"]
+[gd_scene load_steps=7 format=3 uid="uid://bo3fcswknf0ro"]
 
 [ext_resource type="PackedScene" uid="uid://b0r7q3jxnt0ni" path="res://Player/Player.tscn" id="1"]
 [ext_resource type="Script" path="res://Levels/World.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://cufu8n267bptj" path="res://Levels/Assets/Sky.jpg" id="2_1766g"]
 [ext_resource type="Script" path="res://Enemies/scenes/Spawner.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://bt0djvexiow33" path="res://UI/UI.tscn" id="4_smcll"]
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(57.25, 1278)
@@ -18,8 +20,13 @@ position = Vector2(8, 32)
 color = Color(0.772549, 0.772549, 0.772549, 1)
 polygon = PackedVector2Array(-328, -200, -320, 1216, 2176, 1216, 2176, -200)
 
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+position = Vector2(966.667, 543.25)
+scale = Vector2(1.63778, 1.63778)
+texture = ExtResource("2_1766g")
+
 [node name="Player" parent="." instance=ExtResource("1")]
-position = Vector2(154, 118)
+position = Vector2(128, 544)
 speed = 700
 
 [node name="Marker2D" type="Marker2D" parent="Player"]
@@ -29,19 +36,6 @@ position = Vector2(62.6667, -1.35135)
 offset = Vector2(500, 0)
 enabled = false
 zoom = Vector2(0.5, 0.5)
-
-[node name="EdgeCollisions" type="StaticBody2D" parent="."]
-collision_mask = 4
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EdgeCollisions"]
-position = Vector2(963.308, -31)
-scale = Vector2(115.596, 4.1)
-polygon = PackedVector2Array(-9.54887, 7.56098, 9.69925, 7.56098, 9.69925, -8.04878, -9.54887, -8.04878)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="EdgeCollisions"]
-position = Vector2(-147.019, 479.999)
-scale = Vector2(2.82471, 1)
-polygon = PackedVector2Array(2.30769, 600, 790, 600, 790, 664, 2.30769, 664)
 
 [node name="BulletDestroyer" type="Area2D" parent="."]
 collision_mask = 8
@@ -56,5 +50,7 @@ script = ExtResource("3")
 
 [node name="SpawnTimer" type="Timer" parent="Spawner"]
 one_shot = true
+
+[node name="UI" parent="." instance=ExtResource("4_smcll")]
 
 [connection signal="timeout" from="Spawner/SpawnTimer" to="Spawner" method="_on_SpawnTimer_timeout"]

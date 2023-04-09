@@ -4,3 +4,4 @@ extends Node
 
 func _ready():
 	randomize()
+	process_mode = Node.PROCESS_MODE_PAUSABLE

@@ -1,7 +1,5 @@
 res://default_env.tres
 res://Levels/Test.tscn
-res://Player/Projectile/Projectile.tscn
+res://UI/UI.tscn
+res://Player/Player.tscn
 res://Enemies/scenes/0.tscn
-res://Enemies/scenes/1.tscn
-res://Enemies/scenes/enemy.gd
-res://Player/Projectile/Projectile.gd

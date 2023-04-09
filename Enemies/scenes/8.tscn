@@ -10,7 +10,7 @@ size = Vector2(96, 112)
 collision_layer = 2
 collision_mask = 12
 script = ExtResource("2")
-corresponding_number = 8
+corresponding_number = "8"
 
 [node name="E76750A3-aefb-45D7-a1E3-322170A353Fcbb0Fb290D5A5F2511Da515803780E49b" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -20,3 +20,7 @@ texture = ExtResource("2_5rdtt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-1, 2)
+scale = Vector2(4.9, 5.6)

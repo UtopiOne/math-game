@@ -15,7 +15,7 @@ var preloadedEnemies = [
 
 @onready var spawnTimer := $SpawnTimer
 
-var nextSpawnTimer := .5
+var nextSpawnTimer := .25
 
 func _ready():
 	randomize()

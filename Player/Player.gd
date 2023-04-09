@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var PROJECTILE = preload('res://Player/Projectile/Projectile.tscn')
 
-@export var speed = 500
+@export var speed = 1000
 var screen_size
 
 var can_shoot: bool = true
@@ -25,7 +25,7 @@ func get_input():
 	if Input.is_action_just_pressed("shoot") && can_shoot:
 		shoot()
 		can_shoot = false
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(0.25).timeout
 		can_shoot = true
 		
 	return velocity
